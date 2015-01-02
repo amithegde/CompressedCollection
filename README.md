@@ -25,4 +25,11 @@ This datastructure takes a stab at compressing such a collection, by iterating o
 
 To decompress, it goes through the dictionary (the array which has all the strings) and replaces all the string properties with their corresponding values, and returns the same.
 
+Fast Reflection:
+----------------
+Since this needs to perform get/set operations on object properties, it becomes very important to get/set property values fast. For this purpose, it uses `Reflection.Emit` get dynamically emit Getters and Setters for the object, cache them for reuse. Take a look at this code [here][1]. This method works almost as fast as direct propery access.
+
+
 Feel free to fork and use the code.
+
+[1]:https://github.com/amithegde/CompressedCollection/blob/master/src/CompressedCollection/DynamicGetterSetter.cs
