@@ -29,6 +29,7 @@ Fast Reflection:
 ----------------
 Since this needs to perform get/set operations on object properties, it becomes very important to get/set property values fast. For this purpose, it uses `Reflection.Emit` get dynamically emit Getters and Setters for the object, cache them for reuse. Take a look at this code [here][1]. This method works almost as fast as direct propery access.
 
+![](https://raw.githubusercontent.com/amithegde/CompressedCollection/master/img/dyanamicGetterSetterPerfCheck.png)
 
 Feel free to fork and use the code.
 
